@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let colors=['black','blue','red','voilet','purple','yellow','silver'];
+    let result='';
+    for (let i=0; i <= colors.length-1; i++);
+    {
+        result +=`${colors} `;
+    }
+    console.log(result);
+    result='';
+    for(let b of colors){
+        console.log(b);
+    }
+    result='';
+    for (let a in colors){
+        result+= `${colors[a]} `;
+    }
+    console.log(result);
+//     result='';
+//     colors.for each(function(color){
+// result+=`${color} `; });
+
+//     console.log(result);
+   </script> 
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form name="NGR" onsubmit="return validform()" method="post">
+        
+        <div>
+            <h2>SLAT SIGN UP FORM</h2>
+            <h4>SIGN UP</h4>
+            <input type="name" name="name" pattern="[A-Za-z]{3,}" title="must contain alphabets only" placeholder="First Name" autofocus ><br>
+            <input type="name" name="lname" pattern="[A-Za-z]{3,}" title="must contain alphabets only" placeholder="Last Name" autofocus required><br>
+            <input type="tel" name="phone"  pattern="[0-9]{10}" title="number should be in (0-9)" placeholder="Mobile Number" autofocus required><br>
+            <input type="email" name="email" pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" placeholder="E-Mail" autofocus required><br>
+            <input type="password" name="password" title="password should be atleast 6 charecters long" minlength="6" placeholder="Enter password"autofocus required><br>
+            <input type="password" name="cpassword" title="confirm password" minlength="6" placeholder="Confirm pasword" autofocus required><br>
+            <input id="p1" type="submit" value="SIGN UP">
+        </div>
+        
+    </form>
+    <script>
+        function validform(){
+            var fname=document.NGR.name.value;
+            var lname=document.NGR.lname.value;
+            var mobile=document.NGR.phone.value;
+            var password=document.NGR.password.value;
+            var cpassword=document.NGR.cpassword.value;
+            if(fname=="null"||fname==""){
+                alert("enter valid name");
+                return false;
+            }
+            if(lname=="null"||lname==""){
+                alert("enter valid name");
+                return false;
+            }
+            if(mobile.length!==10){
+                alert("please provide a valid number");
+                return false;
+            } 
+            if(password.length!==6){
+                alert("password must be 6 letters");
+                return false;
+            }
+            if(cpassword==password){
+                
+                return true;
+            }
+            else{
+                alert("password and c password must be same");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
